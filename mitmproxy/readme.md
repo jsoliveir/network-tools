@@ -1,6 +1,6 @@
 
 
-# Intercepting and replace requests body
+# Intercepting and replacing requests body
 
 [replace-body.py](replace-body.py)
 
