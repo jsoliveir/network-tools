@@ -15,6 +15,9 @@ If the target auth endpoint responds `200 (OK)` then the request will be proxied
 
 ### Examples
 
+
+#### 1. GitHub
+
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -42,6 +45,7 @@ spec:
               number: 80
 ```
 
+#### 2. Bitbucket
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -56,6 +60,8 @@ metadata:
 spec:
 (...)
 ```
+
+#### 2. Azure
 
 ```yaml
 apiVersion: networking.k8s.io/v1
