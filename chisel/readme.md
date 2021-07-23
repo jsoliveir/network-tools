@@ -3,10 +3,6 @@ _https://github.com/jpillora/chisel_
 
 **[docker-compose.yml](docker-compose.yml)**
 
-check it out
-```bash
-  curl: https://127.0.0.1:8443
-```
 
 The client is listening on port 443  _(8443 is forwared to 443)_
 
@@ -55,4 +51,9 @@ the server, listening for incoming requests and forward them to the remotes info
       - --port=80 
       - --keepalive=1s
       - --auth=${CREDENTIALS}
+```
+
+### check it out
+```bash
+  curl: https://127.0.0.1:8443
 ```
