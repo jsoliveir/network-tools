@@ -23,3 +23,10 @@ services:
     volumes:
         - ./replace-body.py:/src/script.py
  ```
+
+
+# Check it out
+
+```bash
+docker run -it curlimages/cur curl -v https://127.0.0.1:8443 --insecure
+```
