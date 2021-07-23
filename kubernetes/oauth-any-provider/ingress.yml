@@ -1,0 +1,24 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-ingress-file
+  namespace: devops
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    # securing the incomming requests againts a custom indentity provider
+    # the Authorization header (token) will be forwared to the an URL
+    # if the response status is 200 then the NGINX controller will proxy_pass the request
+    nginx.ingress.kubernetes.io/auth-url: >
+        'https://api.bitbucket.org/2.0/user'
+spec:
+  rules:
+  - host: public.cluster.domain
+    http:
+      paths:
+      - path: /anonymous/endpoint
+        pathType: Prefix
+        backend:
+          service:
+            name: internal-service
+            port: 80
