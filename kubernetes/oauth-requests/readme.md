@@ -1,20 +1,15 @@
-# Securing http requests thru any oauth provider
+# Securing incoming HTTP requests thru any OAuth provider
 
-You may need to allow public request to your kubernetes cluster and make sure that only requests came from a trusted location are allowed to reach an http endpoint hosted in kubernetes 
+You may have needed to secure anonymous endpoints in your Kubernetes cluster and make sure that only requests that came from a trusted location are allowed to reach services hosted in Kubernetes.
 
-By using the NGINX Ingress Controller Kubernetes you can take the advantage of the `auth_request` functionality and authorize the request using a custom identity provider.
+`auth_request` is an [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/) functionality that allows forwarding requests to a given identity provider before effectively forwarding them to a Kubernetes service.
 
-[Installing the NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/)
 
-The incomming requests to the NGINX ingress controller and all HTTP headers `(Authorization headers)` will be forwared to a given auth endpoint
-
-If the target auth endpoint responds `200 (OK)` then the request will be proxied to the kubernetes service specified, otherwise a `401` will be replied back to the requester.
+The `auth-url` can be any URL that validates a token. If it responds `200 (OK)`, the request will be proxied to the Kubernetes service.
 
 [Ingress File](ingress.yml)
 
-
 ### Examples
-
 
 #### 1. GitHub
 
