@@ -3,12 +3,12 @@
 ## Tunneling
 
 * [chisel: ssh tunneling over http (proxy and gateways)](chisel/)
-
+* [socat: tcp/ip p2p vpn tunnel over ssl](socat/vpn-ssl)
+* [socat: tcp/ip p2p vpn tunnel](socat/vpn-simple)
 
 ## TCP Hacks
 
-* [socat: vpn with socat](socat/)
-* [socat: tcp/ip forwardings](socat/)
+* [socat: tcp/ip forwardings](socat/forwarding-http-proxy)
 
 ## Reverse proxys and gateways
 
