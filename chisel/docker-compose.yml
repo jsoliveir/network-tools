@@ -1,0 +1,43 @@
+services:
+  # just a tester
+  curl:
+    image: curlimages/curl
+    command: curl -v https://chisel-client --insecure
+    depends_on:
+      - chisel-client
+      
+  # client listening for incoming request on port 443
+  # the requests will be forwards to www.google.com thru the chisel over the http-gateway
+  chisel-client:
+    image: jpillora/chisel
+    command:
+      - client
+      - --keepalive=2s 
+      - --tls-skip-verify
+      - --auth=user:pass
+      - http://http-gateway 
+      - "443:www.google.com:443"
+    depends_on:
+      - http-gateway
+      - chisel-server
+      
+  # just a simple http gateway or reverse proxy server
+  http-gateway:
+    image: mitmproxy/mitmproxy
+    command:
+      - mitmdump
+      - --listen-port=80
+      - --mode=reverse:http://chisel-server
+    depends_on:
+      - chisel-server
+      
+  # the server, listening for incoming requests and forward them to the remotes informed by the client
+  chisel-server:
+    image: jpillora/chisel
+    environment: 
+        CREDENTIALS: '{"user:pass":["www.google.com:.*"]}'
+    command:
+      - server
+      - --port=80 
+      - --keepalive=1s
+      - --auth=${CREDENTIALS}
