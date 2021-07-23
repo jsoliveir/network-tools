@@ -61,7 +61,7 @@ spec:
 (...)
 ```
 
-#### 2. Azure
+#### 3. Azure
 
 ```yaml
 apiVersion: networking.k8s.io/v1
