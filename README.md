@@ -1,14 +1,16 @@
 # What are you looking for?
 
-## Creating tunnels thu http/https proxy/gateways
+## Tunneling
 
-* [chisel - SSH tunneling over HTTP](chisel/)
+* [chisel: ssh tunneling over http (proxy and gateways)](chisel/)
 
 
-## Creating vpns and tcp forwardings?
+## TCP Hacks
 
-* [socat - TCP/IP hacks](socat/)
+* [socat: vpn with socat](socat/)
+* [socat: tcp/ip forwardings](socat/)
 
-## Creating reverse proxys?
+## Reverse proxys and gateways
 
-* [mitmproxy - Requests proxying and intercepting](mitmproxy/)
+* [mitmproxy: http Request/Response interception and manipulation](mitmproxy/)
+* [socat: reverse proxing thru another http proxy](socat/)
