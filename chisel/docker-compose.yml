@@ -1,11 +1,4 @@
 services:
-  # just a tester
-  curl:
-    image: curlimages/curl
-    command: curl -v https://chisel-client --insecure
-    depends_on:
-      - chisel-client
-      
   # client listening for incoming request on port 443
   # the requests will be forwards to www.google.com thru the chisel over the http-gateway
   chisel-client:
@@ -17,6 +10,8 @@ services:
       - --auth=user:pass
       - http://http-gateway 
       - "443:www.google.com:443"
+    ports:
+      - 8443:443
     depends_on:
       - http-gateway
       - chisel-server
