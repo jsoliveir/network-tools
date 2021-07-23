@@ -10,7 +10,7 @@ The incomming requests to the NGINX ingress controller and all HTTP headers `(Au
 
 If the target auth endpoint responds `200 (OK)` then the request will be proxied to the kubernetes service specified, otherwise a `401` will be replied back to the requester.
 
-[Ingress File](oauth-validation-ingress.yml)
+[Ingress File](ingress.yml)
 
 
 ### Examples
