@@ -8,7 +8,6 @@ The client is listening on port 443  _(8443 is forwared to 443)_
 
 The requests will be forward to www.google.com thru the chisel over the http-gateway
 ```yaml
-  
   chisel-client:
     image: jpillora/chisel
     command:
@@ -53,7 +52,7 @@ the server, listening for incoming requests and forward them to the remotes info
       - --auth=${CREDENTIALS}
 ```
 
-### check it out
+# check it out
 ```bash
-  curl: https://127.0.0.1:8443
+docker run -it curlimages/cur curl -v https://127.0.0.1:8443 --insecure
 ```
