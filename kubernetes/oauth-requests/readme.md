@@ -11,6 +11,10 @@ The incomming requests to the NGINX ingress controller and all HTTP headers `(Au
 If the target auth endpoint responds `200 (OK)` then the request will be proxied to the kubernetes service specified, otherwise a `401` will be replied back to the requester.
 
 [Ingress File](oauth-validation-ingress.yml)
+
+
+### Examples
+
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -36,4 +40,33 @@ spec:
             name: internal-service
             port:
               number: 80
+```
+
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-ingress-file
+  namespace: devops
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/auth-url: >
+        'https://api.bitbucket.com/user'
+spec:
+(...)
+```
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-ingress-file
+  namespace: devops
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/auth-url: >
+        'https://graph.microsoft.com/v1.0/me'
+spec:
+(...)
 ```
