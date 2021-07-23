@@ -8,7 +8,7 @@
 
 ## TCP Hacks
 
-* [socat: tcp/ip forwardings](socat/forwarding-http-proxy)
+* [socat: tcp/ip forwarding over proxy](socat/forward-over-proxy)
 
 ## Reverse proxys and gateways
 
