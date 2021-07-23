@@ -18,4 +18,7 @@ Dependencies:
 ## Reverse proxys and gateways
 
 * [mitmproxy: http Request/Response interception and manipulation](mitmproxy/)
+* [mitmproxy: kubernetes requests interception; centralizing access tokens](kubernetes/mitm-proxy/)
 * [socat: reverse proxing thru another http proxy](socat/)
+* [nginx: http/https reverse proxing](nginx/reverse-proxy)
+* [nginx: injecting enviornment varialbes](nginx/env-variables)
