@@ -10,6 +10,7 @@ services:
       - ./nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
     ports: 
       - 8443:443
+      - 8080:80
  ```
  
 # Check it out
