@@ -1,7 +1,7 @@
 # Creating a tunnel over https gateways/proxies
 _https://github.com/jpillora/chisel_
 
-**[Check the docker-compose sample](docker-compose.yml)**
+**[docker-compose.yml](docker-compose.yml)**
 
 Just a tester
 ```yaml
