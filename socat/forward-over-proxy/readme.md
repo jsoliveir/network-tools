@@ -17,5 +17,5 @@ services:
 # Check it out
  
  ```bash
-docker run -it curlimages/cur curl -v https://127.0.0.1:8443 --insecure
+docker run -it --network=host curlimages/curl curl -v https://127.0.0.1:8443 --insecure
  ```
