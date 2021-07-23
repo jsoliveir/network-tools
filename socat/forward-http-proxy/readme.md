@@ -1,5 +1,7 @@
 # Forwarding requests thru an http proxy
 
+[docker-compose](docker-compose.yml)
+
 ```yaml
 services:
  reverse-proxy:
