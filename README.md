@@ -1,6 +1,9 @@
-# What are you looking for?
+# What's in this repository
 
 This repository contains just experiments and examples about tooling and little hacks
+
+Dependencies:
+* https://www.docker.com/products/docker-desktop
 
 ## Tunneling
 
@@ -10,7 +13,7 @@ This repository contains just experiments and examples about tooling and little 
 
 ## TCP/IP forwarding
 
-* [socat: tcp/ip forwarding over proxy](socat/forward-over-proxy)
+* [socat: tcp/ip forwarding thru a proxy server](socat/forward-over-proxy)
 
 ## Reverse proxys and gateways
 
