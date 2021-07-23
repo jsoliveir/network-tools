@@ -8,7 +8,7 @@ test it
   curl: https://127.0.0.1:8443
 ```
 
-The client is listening on port 443 
+The client is listening on port 443  _(8443 is forwared to 443)_
 
 The requests will be forward to www.google.com thru the chisel over the http-gateway
 ```yaml
