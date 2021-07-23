@@ -3,7 +3,7 @@ _https://github.com/jpillora/chisel_
 
 **[docker-compose.yml](docker-compose.yml)**
 
-test it
+check it out
 ```bash
   curl: https://127.0.0.1:8443
 ```
