@@ -1,4 +1,4 @@
-Forwarding requests thru an http proxy
+# Forwarding requests thru an http proxy
 
 ```yaml
 services:
