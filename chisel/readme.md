@@ -3,13 +3,9 @@ _https://github.com/jpillora/chisel_
 
 **[docker-compose.yml](docker-compose.yml)**
 
-Just a tester
-```yaml
-  curl:
-    image: curlimages/curl
-    command: curl -v https://chisel-client --insecure
-    depends_on:
-      - chisel-client
+test it
+```bash
+  curl: https://127.0.0.1:8443
 ```
 
 The client is listening on port 443 
@@ -26,6 +22,8 @@ The requests will be forward to www.google.com thru the chisel over the http-gat
       - --auth=user:pass
       - http://http-gateway 
       - "443:www.google.com:443"
+    ports: 
+      - 8443:443
     depends_on:
       - http-gateway
       - chisel-server
