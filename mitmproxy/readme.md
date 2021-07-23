@@ -4,16 +4,16 @@
 
 ```yaml
 services:
- man-in-the-midle:
+  reverse-proxy:
     image: mitmproxy/mitmproxy
     command:
       - mitmdump
       - --ssl-insecure
-      - --listen-port=8080
-      - --mode=reverse:https://pkgs.dev.azure.com
-      - --modify-headers=:Host:pkgs.dev.azure.com
-      # Authorization Header injection
-      - --modify-headers=:Authorization:Basic <personal access token>
-      # Response body manipulation
-      - --modify-body=|~s|https://pkgs.dev.azure.com|http://pkgs.dev.internbank.api:30000
+      - --listen-port=443
+      - --mode=reverse:https://www.google.com
+      - -s /src/script.py
+    ports:
+        - 8443:443
+    volumes:
+        - ./replace-body.py:/src/script.py
  ```
