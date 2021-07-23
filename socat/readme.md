@@ -79,3 +79,25 @@ services:
 volumes:
     certificates:
 ```
+
+# Forwarding requests thru an http proxy
+
+```yaml
+services:
+ curl:
+    image: curlimages/curl
+    command: curl -v https://www.google.com
+    depends_on:
+        - reverse-proxy
+ reverse-proxy:
+    image: alpine/socat    
+    command:
+        - -dd 
+        - TCP-LISTEN:443,fork,reuseaddr 
+        - PROXY:p-pt1.urban-vpn.com:www.google.com:443,proxyport=80,proxyauth=urbanvpn@urban-vpn.com:urbanvpn4321
+    networks:
+      default:
+        aliases:
+          - www.google.com
+```
+
