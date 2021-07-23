@@ -4,6 +4,10 @@
 
 [replace-body.py](replace-body.py)
 
+[docker-compose.yml](docker-compose.yml)
+
+https://docs.mitmproxy.org/stable/addons-examples/
+
 ```yaml
 services:
   reverse-proxy:
