@@ -1,0 +1,26 @@
+# Creating a simple VPN
+
+[docker-compose.yml](docker-compose.yml)
+
+```yml
+services:
+  # start the server
+  server:
+    image: alpine/socat
+    command:
+      - -dd 
+      - TCP-LISTEN:444,fork,reuseaddr
+      - TUN:10.2.0.1/24,up
+    privileged: true
+    
+  # start the client
+  client:
+      image: alpine/socat
+      command: 
+        - -dd 
+        - TCP-CONNECT:server:444
+        - TUN:10.2.0.2/24,up
+      privileged: true
+      depends_on: 
+        - server
+```
