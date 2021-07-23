@@ -1,4 +1,4 @@
-# Creating a tunnel over https thru gateways/proxies
+# Creating an ssh tunnel thru https gateways/proxies
 _https://github.com/jpillora/chisel_
 
 **[docker-compose.yml](docker-compose.yml)**
