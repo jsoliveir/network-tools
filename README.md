@@ -1,5 +1,7 @@
 # What are you looking for?
 
+This repository contains just experiments and examples about tooling and little hacks
+
 ## Tunneling
 
 * [chisel: ssh tunneling over http (proxy and gateways)](chisel/)
