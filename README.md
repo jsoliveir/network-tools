@@ -6,7 +6,7 @@
 * [socat: tcp/ip p2p vpn tunnel over ssl](socat/vpn-ssl)
 * [socat: tcp/ip p2p vpn tunnel](socat/vpn-simple)
 
-## TCP Hacks
+## TCP forwarding / hacks
 
 * [socat: tcp/ip forwarding over proxy](socat/forward-over-proxy)
 
