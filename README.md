@@ -27,3 +27,7 @@ Dependencies:
 # Task/Process Managers
 
 * [processexplorer: manage process on windows machines](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer)
+
+# Disk space
+
+* [treesize: find directories consuming the disk space](https://www.jam-software.com/treesize_free)
