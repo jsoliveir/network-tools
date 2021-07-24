@@ -1,6 +1,6 @@
 # What's in this repository
 
-This repository contains just experiments and examples about tooling and little hacks
+This repository contains just experiments and examples around tooling and little hacks
 
 Dependencies:
 * https://www.docker.com/products/docker-desktop
