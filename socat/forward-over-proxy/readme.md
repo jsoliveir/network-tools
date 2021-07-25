@@ -1,4 +1,4 @@
-# Forwarding requests thru an http proxy
+# Forwarding tcp/ip connections thru an http proxy
 
 [docker-compose](docker-compose.yml)
 
