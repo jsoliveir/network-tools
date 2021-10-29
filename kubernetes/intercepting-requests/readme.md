@@ -1,11 +1,7 @@
 
 # Intercepting Requests / Centralizing access tokens
 
-If you need to get URL proxied and requests/responses manipulated on the fly, this might be something interesting for you.
-
-_The sensive data should be mapped thru Kubernetes secrets_
-
-[Kubernetes Authentication Proxy](authentication-proxy.yml)
+If you need to get a URL proxied and/or requests/responses manipulated on the fly, this might be something interesting for you.
 
 In the following example we are exposing an azure devops package source thru the internet by centralizing access tokens internally in Kubernetes
 
