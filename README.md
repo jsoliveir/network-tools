@@ -8,21 +8,21 @@ Dependencies:
 ## Tunneling
 
 * [chisel: ssh tunneling over http (proxy and gateways)](chisel/)
-* [socat: tcp/ip p2p vpn tunnel over ssl](socat/vpn-ssl)
-* [socat: tcp/ip p2p vpn tunnel](socat/vpn-simple)
+* [socat: tcp/ip p2p vpn tunnel over ssl](socat/creating-vpns-ssl)
+* [socat: tcp/ip p2p vpn tunnel](socat/creating-vpns-simple)
 
 ## TCP/IP
 
-* [socat: tcp/ip forwarding thru a proxy server](socat/forward-over-proxy)
+* [socat: tcp/ip forwarding thru a proxy server](socat/forwarding-tcp-over-proxy)
 * [tcpviewer: list ports and remote connections](https://docs.microsoft.com/en-us/sysinternals/downloads/tcpview)
 
-## Reverse proxys and gateways
+## Reverse proxying and gateways
 
 * [mitmproxy: http Request/Response interception and manipulation](mitmproxy/)
-* [mitmproxy: kubernetes requests interception; centralizing access tokens](kubernetes/mitm-proxy/)
+* [mitmproxy: kubernetes requests interception; centralizing access tokens](kubernetes/intercepting-requests/)
 * [socat: reverse proxing thru another http proxy](socat/)
 * [nginx: http/https reverse proxing](nginx/reverse-proxy)
-* [nginx: injecting enviornment varialbes](nginx/env-variables)
+* [nginx: injecting enviornment varialbes](nginx/using-env-variables)
 
 # Task/Process Managers
 

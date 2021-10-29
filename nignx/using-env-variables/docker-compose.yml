@@ -1,0 +1,11 @@
+
+services:
+  reverse-proxy:
+    image: openresty/openresty:alpine 
+    environment: 
+        RESPONSE_BODY: "It's working"   
+    volumes:
+      - ./nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
+    ports: 
+      - 8080:80
+   
